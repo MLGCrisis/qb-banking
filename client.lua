@@ -63,36 +63,41 @@ end)
 RegisterNUICallback('withdraw', function(data, cb)
     QBCore.Functions.TriggerCallback('qb-banking:server:withdraw', function(status)
         cb(status)
+        TriggerEvent('wais:addmissionxp:withdraw', 1) --added by pamela for wais battlepass
     end, data)
 end)
 
 RegisterNUICallback('deposit', function(data, cb)
     QBCore.Functions.TriggerCallback('qb-banking:server:deposit', function(status)
         cb(status)
+        TriggerEvent('wais:addmissionxp:deposit', 1) --added by pamela for wais battlepass
     end, data)
 end)
 
 RegisterNUICallback('internalTransfer', function(data, cb)
     QBCore.Functions.TriggerCallback('qb-banking:server:internalTransfer', function(status)
         cb(status)
-    end, data)
+        TriggerEvent('wais:addmissionxp:transfer', 1) --added by pamela for wais battlepass
 end)
 
 RegisterNUICallback('externalTransfer', function(data, cb)
     QBCore.Functions.TriggerCallback('qb-banking:server:externalTransfer', function(status)
         cb(status)
+        TriggerEvent('wais:addmissionxp:transfer', 1) --added by pamela for wais battlepass
     end, data)
 end)
 
 RegisterNUICallback('orderCard', function(data, cb)
     QBCore.Functions.TriggerCallback('qb-banking:server:orderCard', function(status)
         cb(status)
+        TriggerEvent('wais:addmissionxp:ordercard', 1) --added by pamela for wais battlepass
     end, data)
 end)
 
 RegisterNUICallback('openAccount', function(data, cb)
     QBCore.Functions.TriggerCallback('qb-banking:server:openAccount', function(status)
         cb(status)
+        TriggerEvent('wais:addmissionxp:openaccount', 1) --added by pamela for wais battlepass
     end, data)
 end)
 
